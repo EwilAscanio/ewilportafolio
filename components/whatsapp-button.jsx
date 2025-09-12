@@ -6,7 +6,7 @@
  */
 export function WhatsAppButton() {
   // Número de WhatsApp (cambiar por el número real)
-  const phoneNumber = "1234567890" // Formato: código de país + número sin espacios ni símbolos
+  const phoneNumber = "4145942817" // Formato: código de país + número sin espacios ni símbolos
   const message = "¡Hola! Me interesa conocer más sobre tus servicios de desarrollo web."
 
   const handleWhatsAppClick = () => {
