@@ -48,7 +48,7 @@ export function ContactSection() {
         </svg>
       ),
       title: "Email",
-      value: "desarrollador@email.com",
+      value: "ewilascanio@gmail.com",
       link: "mailto:desarrollador@email.com",
     },
     {
@@ -63,7 +63,7 @@ export function ContactSection() {
         </svg>
       ),
       title: "Teléfono",
-      value: "+1 (234) 567-8900",
+      value: "+58 (414) 594-2817",
       link: "tel:+12345678900",
     },
     {
@@ -79,7 +79,7 @@ export function ContactSection() {
         </svg>
       ),
       title: "Ubicación",
-      value: "Ciudad, País",
+      value: "Ciudad de Valencia, Venezuela",
       link: "#",
     },
   ]
@@ -95,7 +95,7 @@ export function ContactSection() {
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-2">
             <span className="text-slate-900 dark:text-gray-300">Trabajemos </span>
-            <span className="text-blue-600">Juntos</span>
+            <span className="text-primary">Juntos</span>
           </h2>
           <div className="w-20 h-1 bg-blue-600 mx-auto" />
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto mt-4">
@@ -111,7 +111,7 @@ export function ContactSection() {
             }`}
             style={{ transitionDelay: "200ms" }}
           >
-            <div>
+            <div >
               <h3 className="text-2xl font-bold mb-6 text-blue-600 dark:text-gray-300 [text-shadow:2px_2px_4px_rgba(0,0,0,0.2)] dark:[text-shadow:2px_2px_4px_rgba(0,0,0,0.1)]">
                 Información de Contacto
               </h3>

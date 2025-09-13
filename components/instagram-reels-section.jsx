@@ -67,7 +67,7 @@ export function InstagramReelsSection() {
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-2">
             <span className="text-slate-900 dark:text-gray-300">Reels & </span>
-            <span className="text-blue-600">Videos</span>
+            <span className="text-primary">Videos</span>
           </h2>
           <div className="w-20 h-1 bg-blue-600 mx-auto" />
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed mt-4">
@@ -152,7 +152,7 @@ export function InstagramReelsSection() {
           ))}
         </div>
 
-        <div
+        {/* <div
           className={`text-center mt-16 transition-all duration-1000 delay-600 ease-out ${
             sectionVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
@@ -174,7 +174,9 @@ export function InstagramReelsSection() {
               </button>
             </div>
           </div>
-        </div>
+        </div> */}
+
+
       </div>
     </section>
   )

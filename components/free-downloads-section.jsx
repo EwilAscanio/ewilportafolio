@@ -103,7 +103,7 @@ export function FreeDownloadsSection() {
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-2">
             <span className="text-slate-900 dark:text-gray-300">Descargas </span>
-            <span className="text-blue-600">Gratuitas</span>
+            <span className="text-primary">Gratuitas</span>
           </h2>
           <div className="w-20 h-1 bg-blue-600 mx-auto" />
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed mt-4">
@@ -144,13 +144,17 @@ export function FreeDownloadsSection() {
                   className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 {/* Badge del tipo */}
-                <div className="absolute top-4 left-4 bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-semibold">
+                
+                {/* <div className="absolute top-4 left-4 bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-semibold">
                   {resource.type}
-                </div>
+                </div> */}
+
                 {/* Información del archivo */}
-                <div className="absolute top-4 right-4 bg-black text-white px-3 py-1 rounded-full text-sm">
+                
+                {/* <div className="absolute top-4 right-4 bg-black text-white px-3 py-1 rounded-full text-sm">
                   {resource.format} • {resource.size}
-                </div>
+                </div> */}
+
               </div>
 
               {/* Contenido */}
@@ -199,7 +203,7 @@ export function FreeDownloadsSection() {
         </div>
 
         {/* Newsletter signup */}
-        <div
+        {/* <div
           className={`mt-20 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-2xl p-8 text-center transition-all duration-1000 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
@@ -223,7 +227,9 @@ export function FreeDownloadsSection() {
             </button>
           </div>
           <p className="text-xs text-muted-foreground mt-4">Sin spam. Cancela cuando quieras. 📧</p>
-        </div>
+        </div> */}
+
+
       </div>
     </section>
   )

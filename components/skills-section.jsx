@@ -38,7 +38,7 @@ export function SkillsSection() {
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-2">
             <span className="text-slate-900 dark:text-gray-300">Habilidades </span>
-            <span className="text-blue-600">Técnicas</span>
+            <span className="text-primary">Técnicas</span>
           </h2>
           <div className="w-20 h-1 bg-blue-600 mx-auto" />
           <p className="text-xl text-muted-foreground mt-4">Tecnologías que domino y utilizo en mis proyectos</p>

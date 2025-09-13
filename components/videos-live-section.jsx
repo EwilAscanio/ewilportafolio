@@ -100,7 +100,7 @@ export function VideosLiveSection() {
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-2">
             <span className="text-slate-900 dark:text-gray-300">Videos & </span>
-            <span className="text-blue-600">Live Streams</span>
+            <span className="text-primary">Live Streams</span>
           </h2>
           <div className="w-20 h-1 bg-blue-600 mx-auto" />
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed mt-4">

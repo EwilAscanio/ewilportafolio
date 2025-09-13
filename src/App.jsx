@@ -10,10 +10,8 @@ import { FreeDownloadsSection } from "@/components/free-downloads-section"
 import { VideosLiveSection } from "@/components/videos-live-section"
 import { Navbar } from "@/components/navbar"
 import Hero from "../components/Hero"
+import HeroSection from "../components/HeroSection"
 
-// Fonts from Geist - assuming they are handled globally or via CSS import
-// import { GeistSans } from "geist/font/sans"
-// import { GeistMono } from "geist/font/mono"
 
 export default function App() {
   const { elementRef: footerRef, isVisible: footerVisible } = useScrollAnimation({
@@ -29,10 +27,10 @@ export default function App() {
 
       {/* Contenido principal */}
       <main>
-        <Hero />
+        <HeroSection />
         {/* Sección Hero con header 3D */}
         <section id="inicio">
-          <Header3D />
+          <Hero />
         </section>
 
         {/* Sección sobre mí */}

@@ -32,7 +32,7 @@ export function AboutSection() {
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-2">
             <span className="text-slate-900 dark:text-gray-300">Sobre </span>
-            <span className="text-blue-600">Mí</span>
+            <span className="text-primary">Mí</span>
           </h2>
           <div className="w-20 h-1 bg-blue-600 mx-auto" />
         </div>

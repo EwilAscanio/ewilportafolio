@@ -1,20 +1,11 @@
-import { Button } from "./ui/button"
-import { ArrowRight, Download, Github, Linkedin } from "lucide-react";
+import { Github, Linkedin } from "lucide-react";
 import { useRevealAnimation } from "../hooks/useRevealAnimation"
-import heroBg from "../public/hero-bg.jpg"
 
 const Hero = () => {
 
   const contentRef = useRevealAnimation();
   const buttonsRef = useRevealAnimation();
   const socialRef = useRevealAnimation();
-
-  // const scrollToSection = (href) => {
-  //   const element = document.querySelector(href);
-  //   if (element) {
-  //     element.scrollIntoView({ behavior: "smooth" });
-  //   }
-  // };
 
   const scrollToContact = () => {
     document.getElementById("contacto")?.scrollIntoView({ behavior: "smooth" })
@@ -30,7 +21,7 @@ const Hero = () => {
       id="home" 
       className="min-h-screen flex items-center justify-center relative overflow-hidden"
       style={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${heroBg})`,
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/hero-bg.jpg)`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundAttachment: 'fixed'
@@ -46,12 +37,6 @@ const Hero = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         <div ref={contentRef} className="slide-in-up reveal-up">
           
-          {/* Badge */}
-          {/* <div className="inline-flex items-center px-4 py-2 rounded-full glass-card mb-8 glow-primary">
-            <div className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></div>
-            <span className="text-sm text-white">Disponible para proyectos</span>
-          </div> */}
-
           {/* Main heading */}
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
             Desarrollamos,
@@ -74,7 +59,7 @@ const Hero = () => {
 
             <button
                   onClick={scrollToProjects}
-                  className="px-8 py-4 bg-primary text-primary-foreground rounded-lg font-semibold 
+                  className="px-8 py-4 bg-primary text-white rounded-lg font-semibold 
                            hover:bg-primary/90 transform hover:scale-105 transition-all duration-300 
                            shadow-lg hover:shadow-xl hover:shadow-blue-500/25"
                 >
@@ -106,6 +91,8 @@ const Hero = () => {
               <Linkedin className="w-5 h-5" />
             </a>
           </div>
+
+          
         </div>
       </div>
 
