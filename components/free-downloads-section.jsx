@@ -101,10 +101,12 @@ export function FreeDownloadsSection() {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-600 via-blue-800 to-black bg-clip-text text-transparent leading-tight">
-            Descargas Gratuitas
+          <h2 className="text-4xl md:text-5xl font-bold mb-2">
+            <span className="text-slate-900 dark:text-gray-300">Descargas </span>
+            <span className="text-blue-600">Gratuitas</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <div className="w-20 h-1 bg-blue-600 mx-auto" />
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed mt-4">
             Recursos gratuitos de alta calidad para acelerar tu desarrollo. Componentes, guías, templates y herramientas
             que uso en mis proyectos diarios.
           </p>
@@ -203,7 +205,7 @@ export function FreeDownloadsSection() {
           }`}
           style={{ transitionDelay: "600ms" }}
         >
-          <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-blue-600 via-blue-800 to-black bg-clip-text text-transparent leading-tight">
+          <h3 className="text-2xl font-bold mb-4 text-blue-600 dark:text-gray-300 [text-shadow:2px_2px_4px_rgba(0,0,0,0.2)] dark:[text-shadow:2px_2px_4px_rgba(0,0,0,0.1)]">
             ¿Quieres más recursos gratuitos?
           </h3>
           <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">

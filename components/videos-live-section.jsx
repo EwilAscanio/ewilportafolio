@@ -98,10 +98,12 @@ export function VideosLiveSection() {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-600 via-blue-800 to-black bg-clip-text text-transparent">
-            Videos & Live Streams
+          <h2 className="text-4xl md:text-5xl font-bold mb-2">
+            <span className="text-slate-900 dark:text-gray-300">Videos & </span>
+            <span className="text-blue-600">Live Streams</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <div className="w-20 h-1 bg-blue-600 mx-auto" />
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed mt-4">
             Contenido educativo de alta calidad y transmisiones en vivo donde programamos juntos, resolvemos dudas y
             exploramos las últimas tecnologías.
           </p>
@@ -216,7 +218,7 @@ export function VideosLiveSection() {
               style={{ transitionDelay: "800ms" }}
             >
               <div className="bg-red-50 dark:bg-red-950/20 border border-red-200 dark:border-red-800 rounded-2xl p-8 max-w-2xl mx-auto">
-                <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-blue-600 via-blue-800 to-black bg-clip-text text-transparent">
+                <h3 className="text-2xl font-bold mb-4 text-blue-600 dark:text-gray-300 [text-shadow:2px_2px_4px_rgba(0,0,0,0.2)] dark:[text-shadow:2px_2px_4px_rgba(0,0,0,0.1)]">
                   📺 Suscríbete a mi canal
                 </h3>
                 <p className="text-muted-foreground mb-6">
@@ -325,7 +327,7 @@ export function VideosLiveSection() {
               }`}
               style={{ transitionDelay: "600ms" }}
             >
-              <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-blue-600 via-blue-800 to-black bg-clip-text text-transparent">
+              <h3 className="text-2xl font-bold mb-4 text-blue-600 dark:text-gray-300 [text-shadow:2px_2px_4px_rgba(0,0,0,0.2)] dark:[text-shadow:2px_2px_4px_rgba(0,0,0,0.1)]">
                 🔔 No te pierdas ningún stream
               </h3>
               <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">

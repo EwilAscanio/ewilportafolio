@@ -30,9 +30,11 @@ export function AboutSection() {
             sectionVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-10"
           }`}
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-600 via-blue-800 to-black bg-clip-text text-transparent leading-tight">
-            Sobre Mí
+          <h2 className="text-4xl md:text-5xl font-bold mb-2">
+            <span className="text-slate-900 dark:text-gray-300">Sobre </span>
+            <span className="text-blue-600">Mí</span>
           </h2>
+          <div className="w-20 h-1 bg-blue-600 mx-auto" />
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -70,7 +72,7 @@ export function AboutSection() {
             }`}
           >
             <div>
-              <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-blue-600 via-blue-800 to-black bg-clip-text text-transparent leading-tight">
+              <h3 className="text-2xl font-bold mb-4 text-blue-600 dark:text-gray-300 leading-tight [text-shadow:2px_2px_4px_rgba(0,0,0,0.2)] dark:[text-shadow:2px_2px_4px_rgba(0,0,0,0.1)]">
                 ¡Hola! Soy un desarrollador web apasionado
               </h3>
               <p className="text-muted-foreground leading-relaxed text-lg">
@@ -81,7 +83,7 @@ export function AboutSection() {
             </div>
 
             <div>
-              <h4 className="text-xl font-semibold text-primary mb-3">Mi Enfoque</h4>
+              <h4 className="text-xl font-semibold text-blue-600 dark:text-gray-300 mb-3 [text-shadow:2px_2px_4px_rgba(0,0,0,0.2)] dark:[text-shadow:2px_2px_4px_rgba(0,0,0,0.1)]">Mi Enfoque</h4>
               <p className="text-muted-foreground leading-relaxed">
                 Creo en la importancia de entender las necesidades del cliente para crear soluciones que no solo
                 funcionen perfectamente, sino que también ofrezcan una experiencia de usuario excepcional. Cada proyecto
@@ -91,9 +93,9 @@ export function AboutSection() {
 
             <div ref={statsRef} className="grid grid-cols-3 gap-4 pt-6">
               {[
-                { value: "50+", label: "Proyectos", color: "text-primary" },
-                { value: "3+", label: "Años Exp.", color: "text-secondary" },
-                { value: "100%", label: "Satisfacción", color: "text-accent" },
+                { value: "50+", label: "Tazas de Café", color: "text-primary" },
+                { value: "3+", label: "Años Exp.", color: "text-primary" },
+                { value: "99%", label: "Satisfacción", color: "text-primary" },
               ].map((stat, index) => (
                 <div
                   key={index}
@@ -109,7 +111,7 @@ export function AboutSection() {
 
             {/* Valores */}
             <div className="pt-4">
-              <h4 className="text-xl font-semibold text-primary mb-3 leading-tight">Mis Valores</h4>
+              <h4 className="text-xl font-semibold text-blue-600 dark:text-gray-300 mb-3 leading-tight [text-shadow:2px_2px_4px_rgba(0,0,0,0.2)] dark:[text-shadow:2px_2px_4px_rgba(0,0,0,0.1)]">Mis Valores</h4>
               <div className="space-y-2">
                 {[
                   "💡 Innovación constante y aprendizaje continuo",

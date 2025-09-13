@@ -17,26 +17,27 @@ export function PortfolioSection() {
 
   const projects = [
     {
+      title: "Sistema de Gestión de Ganado",
+      description: "Aplicación web para seguimiento y administración de ganado",
+      image: "/mobile-app-interface.png",
+      tech: ["Next JS", "Tailwind CSS", "MariaDB", ],
+      link: "#",
+    },
+    {
       title: "E-commerce Moderno",
       description: "Plataforma de comercio electrónico con React y Node.js",
       image: "/modern-ecommerce-interface.png",
-      tech: ["React", "Node.js", "MongoDB"],
+      tech: ["React", "MariaDB", "Javascript"],
       link: "#",
     },
     {
-      title: "Dashboard Analytics",
+      title: "Sistema de Asistencia",
       description: "Panel de control con visualización de datos en tiempo real",
       image: "/analytics-dashboard.png",
-      tech: ["React", "D3.js", "API REST"],
+      tech: ["Next JS", "Tailwind CSS", "MariaDB"],
       link: "#",
     },
-    {
-      title: "App Móvil Híbrida",
-      description: "Aplicación móvil multiplataforma con React Native",
-      image: "/mobile-app-interface.png",
-      tech: ["React Native", "Firebase", "Redux"],
-      link: "#",
-    },
+   
   ]
 
   return (
@@ -52,10 +53,12 @@ export function PortfolioSection() {
             sectionVisible ? "opacity-100 translate-y-0 scale-100" : "opacity-0 -translate-y-10 scale-95"
           }`}
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-600 via-blue-800 to-black bg-clip-text text-transparent">
-            Proyectos Destacados
+          <h2 className="text-4xl md:text-5xl font-bold mb-2">
+            <span className="text-slate-900 dark:text-gray-300">Proyectos </span>
+            <span className="text-blue-600">Destacados</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <div className="w-20 h-1 bg-blue-600 mx-auto" />
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto mt-4">
             Una selección de mis trabajos más recientes y desafiantes
           </p>
         </div>
@@ -104,6 +107,13 @@ export function PortfolioSection() {
                   className="w-full hover:bg-primary hover:text-primary-foreground transition-colors duration-300 bg-transparent"
                 >
                   Ver Proyecto
+                </Button>
+
+                <Button
+                  variant="outline"
+                  className="w-full hover:bg-primary hover:text-primary-foreground transition-colors duration-300 bg-transparent"
+                >
+                  Codigo
                 </Button>
               </CardContent>
             </Card>

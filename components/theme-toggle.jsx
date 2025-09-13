@@ -40,9 +40,9 @@ export function ThemeToggle() {
       variant="outline"
       size="sm"
       onClick={toggleTheme}
-      className="relative overflow-hidden transition-all duration-300 hover:scale-105 bg-transparent"
+      className="relative overflow-hidden transition-all duration-300 hover:scale-105 bg-transparent text-white"
     >
-      <div className={`transition-transform duration-300 ${isDark ? "rotate-180" : "rotate-0"}`}>
+      <div className={`transition-transform duration-300 ${isDark ? "rotate-360" : "rotate-0"}`}>
         {isDark ? (
           // Icono de luna para modo oscuro
           <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">

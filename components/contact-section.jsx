@@ -93,10 +93,12 @@ export function ContactSection() {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-600 via-blue-800 to-black bg-clip-text text-transparent leading-tight">
-            Trabajemos Juntos
+          <h2 className="text-4xl md:text-5xl font-bold mb-2">
+            <span className="text-slate-900 dark:text-gray-300">Trabajemos </span>
+            <span className="text-blue-600">Juntos</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <div className="w-20 h-1 bg-blue-600 mx-auto" />
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto mt-4">
             ¿Tienes un proyecto en mente? Me encantaría escuchar tus ideas y ayudarte a hacerlas realidad.
           </p>
         </div>
@@ -110,7 +112,7 @@ export function ContactSection() {
             style={{ transitionDelay: "200ms" }}
           >
             <div>
-              <h3 className="text-2xl font-bold mb-6 bg-gradient-to-r from-blue-600 via-blue-800 to-black bg-clip-text text-transparent leading-tight">
+              <h3 className="text-2xl font-bold mb-6 text-blue-600 dark:text-gray-300 [text-shadow:2px_2px_4px_rgba(0,0,0,0.2)] dark:[text-shadow:2px_2px_4px_rgba(0,0,0,0.1)]">
                 Información de Contacto
               </h3>
               <div className="space-y-4">
@@ -144,7 +146,7 @@ export function ContactSection() {
               }`}
               style={{ transitionDelay: "600ms" }}
             >
-              <h3 className="text-xl font-bold mb-4 bg-gradient-to-r from-blue-600 via-blue-800 to-black bg-clip-text text-transparent leading-tight">
+              <h3 className="text-xl font-bold mb-4 text-blue-600 dark:text-gray-300 [text-shadow:2px_2px_4px_rgba(0,0,0,0.2)] dark:[text-shadow:2px_2px_4px_rgba(0,0,0,0.1)]">
                 Sígueme en
               </h3>
               <div className="flex space-x-4">
@@ -170,7 +172,7 @@ export function ContactSection() {
             style={{ transitionDelay: "400ms" }}
           >
             <CardHeader>
-              <CardTitle className="text-2xl text-primary">Envíame un Mensaje</CardTitle>
+              <CardTitle className="text-2xl text-blue-600 dark:text-gray-300">Envíame un Mensaje</CardTitle>
               <CardDescription>Completa el formulario y te responderé lo antes posible</CardDescription>
             </CardHeader>
             <CardContent>

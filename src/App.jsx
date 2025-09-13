@@ -1,6 +1,4 @@
-import { useState, useEffect } from "react"
 import { useScrollAnimation } from "@/hooks/use-scroll-animation"
-import { ThemeToggle } from "@/components/theme-toggle"
 import { WhatsAppButton } from "@/components/whatsapp-button"
 import { Header3D } from "@/components/header-3d"
 import { AboutSection } from "@/components/about-section"
@@ -10,109 +8,28 @@ import { ContactSection } from "@/components/contact-section"
 import { InstagramReelsSection } from "@/components/instagram-reels-section"
 import { FreeDownloadsSection } from "@/components/free-downloads-section"
 import { VideosLiveSection } from "@/components/videos-live-section"
+import { Navbar } from "@/components/navbar"
+import Hero from "../components/Hero"
 
 // Fonts from Geist - assuming they are handled globally or via CSS import
 // import { GeistSans } from "geist/font/sans"
 // import { GeistMono } from "geist/font/mono"
 
 export default function App() {
-  const [isScrolled, setIsScrolled] = useState(false)
-  const [activeSection, setActiveSection] = useState("inicio")
-
   const { elementRef: footerRef, isVisible: footerVisible } = useScrollAnimation({
     threshold: 0.1,
     triggerOnce: true,
   })
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
-
-      // Detectar sección activa
-      const sections = ["inicio", "sobre-mí", "proyectos", "habilidades", "reels", "descargas", "videos", "contacto"]
-      const currentSection = sections.find((section) => {
-        const element = document.getElementById(section)
-        if (element) {
-          const rect = element.getBoundingClientRect()
-          return rect.top <= 100 && rect.bottom >= 100
-        }
-        return false
-      })
-
-      if (currentSection) {
-        setActiveSection(currentSection)
-      }
-    }
-
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
-
-  const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId)
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" })
-    }
-  }
-
   return (
     // The html and body tags are handled by index.html
     // Applying font classes directly to the root div or via global CSS
     <div className="font-sans antialiased min-h-screen bg-background">
-      {/* Navegación superior */}
-      <nav
-        className={`fixed top-0 left-0 right-0 z-40 transition-all duration-500 ${
-          isScrolled
-            ? "bg-black/40 backdrop-blur-lg border-b border-white/20 shadow-lg"
-            : "bg-black/30 backdrop-blur-md border-b border-white/10"
-        }`}
-      >
-        <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-          {/* Logo */}
-          <div
-            className={`text-2xl font-bold text-white transition-all duration-300 ${
-              isScrolled ? "scale-95" : "scale-100"
-            }`}
-          >
-            Portafolio
-          </div>
-
-          {/* Menú de navegación */}
-          <div className="hidden md:flex space-x-8">
-            {[
-              { name: "Inicio", id: "inicio" },
-              { name: "Sobre Mí", id: "sobre-mí" },
-              { name: "Proyectos", id: "proyectos" },
-              { name: "Habilidades", id: "habilidades" },
-              { name: "Reels", id: "reels" },
-              { name: "Descargas", id: "descargas" },
-              { name: "Videos", id: "videos" },
-              { name: "Contacto", id: "contacto" },
-            ].map((item, index) => (
-              <button
-                key={index}
-                onClick={() => scrollToSection(item.id)}
-                className={`group relative font-medium transition-all duration-300 hover:text-blue-600 ${
-                  activeSection === item.id ? "text-blue-600" : "text-white/90"
-                }`}
-              >
-                {item.name}
-                <span className={`absolute -bottom-1 left-0 h-0.5 bg-blue-600 rounded-full transition-all duration-300 ${
-                  activeSection === item.id ? "w-full right-0" : "w-0 group-hover:w-full"
-                }`} />
-              </button>
-            ))}
-          </div>
-
-          {/* Toggle de tema */}
-          <div className={`transition-all duration-300 ${isScrolled ? "scale-95" : "scale-100"}`}>
-            <ThemeToggle />
-          </div>
-        </div>
-      </nav>
+      <Navbar />
 
       {/* Contenido principal */}
       <main>
+        <Hero />
         {/* Sección Hero con header 3D */}
         <section id="inicio">
           <Header3D />

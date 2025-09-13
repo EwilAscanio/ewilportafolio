@@ -36,10 +36,12 @@ export function SkillsSection() {
             sectionVisible ? "opacity-100 translate-y-0 scale-100" : "opacity-0 -translate-y-10 scale-95"
           }`}
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-600 via-blue-800 to-black bg-clip-text text-transparent">
-            Habilidades Técnicas
+          <h2 className="text-4xl md:text-5xl font-bold mb-2">
+            <span className="text-slate-900 dark:text-gray-300">Habilidades </span>
+            <span className="text-blue-600">Técnicas</span>
           </h2>
-          <p className="text-xl text-muted-foreground">Tecnologías que domino y utilizo en mis proyectos</p>
+          <div className="w-20 h-1 bg-blue-600 mx-auto" />
+          <p className="text-xl text-muted-foreground mt-4">Tecnologías que domino y utilizo en mis proyectos</p>
         </div>
 
         <div ref={skillsRef} className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -76,7 +78,7 @@ export function SkillsSection() {
             sectionVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          <h3 className="text-2xl font-bold mb-8 bg-gradient-to-r from-blue-600 via-blue-800 to-black bg-clip-text text-transparent">
+          <h3 className="text-2xl font-bold mb-8 text-blue-600 dark:text-gray-300 [text-shadow:2px_2px_4px_rgba(0,0,0,0.2)] dark:[text-shadow:2px_2px_4px_rgba(0,0,0,0.1)]">
             Certificaciones
           </h3>
           <div ref={certsRef} className="flex flex-wrap justify-center gap-4">
