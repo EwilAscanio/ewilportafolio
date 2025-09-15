@@ -2,6 +2,8 @@
 
 import { useState, useEffect } from "react"
 import { ThemeToggle } from "@/components/theme-toggle"
+import Logo from "../public/logo.jpg"
+import Logo2 from "../public/logo2.png"
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -53,7 +55,8 @@ export function Navbar() {
             isScrolled ? "scale-95" : "scale-100"
           }`}
         >
-          Portafolio
+          <img src={Logo2} alt="" className=" h-14 w-auto object-cover drop-shadow-gray-600 drop-shadow-sm" />
+          
         </div>
 
         {/* Menú de navegación */}
@@ -71,13 +74,13 @@ export function Navbar() {
             <button
               key={index}
               onClick={() => scrollToSection(item.id)}
-              className={`group relative font-medium transition-all duration-300 hover:text-blue-600 ${
+              className={`group relative font-medium transition-all duration-300 hover:cursor-pointer hover:text-blue-600 ${
                 activeSection === item.id ? "text-blue-600" : "text-white/90"
               }`}
             >
               {item.name}
               <span className={`absolute -bottom-1 left-0 h-0.5 bg-blue-600 rounded-full transition-all duration-300 ${
-                activeSection === item.id ? "w-full right-0" : "w-0 group-hover:w-full"
+                activeSection === item.id ? "w-full right-0" : "w-0 group-hover:w-full "
               }`} />
             </button>
           ))}

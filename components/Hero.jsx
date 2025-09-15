@@ -102,6 +102,8 @@ const Hero = () => {
           <div className="w-1 h-3 bg-white rounded-full mt-2 animate-bounce"></div>
         </div>
       </div>
+
+      
     </section>
   );
 };

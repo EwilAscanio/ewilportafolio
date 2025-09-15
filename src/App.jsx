@@ -27,10 +27,10 @@ export default function App() {
 
       {/* Contenido principal */}
       <main>
-        <HeroSection />
+        
         {/* Sección Hero con header 3D */}
         <section id="inicio">
-          <Hero />
+        <HeroSection />
         </section>
 
         {/* Sección sobre mí */}

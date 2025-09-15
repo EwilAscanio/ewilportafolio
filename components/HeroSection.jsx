@@ -1,11 +1,15 @@
 import * as React from 'react'
 import { ArrowLeft, ArrowRight } from 'lucide-react'
-
+import { Github, Linkedin } from "lucide-react";
+import { useRevealAnimation } from "../hooks/useRevealAnimation"
 import { Button } from '@/components/ui/button'
 
 const HeroSection = () => {
   const [activeIndex, setActiveIndex] = React.useState(0)
   const [animationKey, setAnimationKey] = React.useState(0)
+
+  const socialRef = useRevealAnimation();
+  const [buttonsVisible, setButtonsVisible] = React.useState(false);
 
   const slides = [
     {
@@ -30,6 +34,18 @@ const HeroSection = () => {
       ctaLink: '#sobre-mi',
     },
   ]
+
+  const subtitleWords = slides[activeIndex].subtitle.split(' ');
+  const subtitleAnimationDuration = (subtitleWords.length * 0.08 + 0.5) * 1000; // in ms
+
+  React.useEffect(() => {
+    setButtonsVisible(false);
+    const timer = setTimeout(() => {
+      setButtonsVisible(true);
+    }, subtitleAnimationDuration);
+
+    return () => clearTimeout(timer);
+  }, [animationKey, subtitleAnimationDuration]);
 
   const nextSlide = React.useCallback(() => {
     setActiveIndex((prevIndex) =>
@@ -94,47 +110,96 @@ const HeroSection = () => {
               </span>
             ))}
           </h1>
-          <p 
-            className="text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto leading-relaxed animate-subtle-slide-in-up"
-            style={{ animationDelay: '1s' }}
-          >
-            {slides[activeIndex].subtitle}
+          <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto leading-relaxed">
+            {subtitleWords.map((word, index) => (
+              <span
+                key={index}
+                className="animate-fade-in-word"
+                style={{ animationDelay: `${index * 0.08 + 0.5}s` }}
+              >
+                {word}{' '}
+              </span>
+            ))}
           </p>
-          <Button 
-            onClick={() => scrollToSection(slides[activeIndex].ctaLink)}
-            className="px-8 py-4 bg-primary text-white rounded-lg font-semibold hover:bg-primary/90 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-blue-500/25 animate-subtle-slide-in-up"
-            style={{ animationDelay: '1.5s' }}
-          >
-            {slides[activeIndex].cta}
-          </Button>
+         
+          <div className={`flex flex-col sm:flex-row gap-4 justify-center items-center mb-12 reveal-bounce ${buttonsVisible ? 'visible' : ''}`}>
+            <button
+                  onClick={() => scrollToSection('#proyectos')}
+                  className="px-8 py-4 bg-primary text-white font-semibold 
+                           hover:bg-primary/90 transform hover:scale-105 transition-all duration-300 
+                           shadow-lg hover:shadow-xl hover:shadow-blue-500/25"
+                >
+                  Ver Mis Proyectos
+                </button>
+                <button
+                  onClick={() => scrollToSection('#contacto')}
+                  className="px-8 py-4 border-2 border-white/20 text-white backdrop-blur-sm font-semibold 
+                           hover:bg-primary hover:text-primary-foreground transform hover:scale-105 
+                           transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/25"
+                >
+                  Contactar Ahora
+                </button>
+          </div> 
         </div>
       </div>
 
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex space-x-2">
-        {slides.map((_, index) => (
-          <button 
-            key={index}
-            onClick={() => goToSlide(index)}
-            className={`w-3 h-3 rounded-full ${activeIndex === index ? 'bg-white' : 'bg-white/50'}`}
-          />
-        ))}
-      </div>
-      <Button
-        variant="outline"
-        size="icon"
-        className="absolute left-4 top-1/2 -translate-y-1/2 rounded-full z-20 bg-white/10 text-white hover:bg-white/20 border-none"
-        onClick={prevSlide}
-      >
+      
+
+      {/* Navigation Arrows */}
+      
+      {/* <div className="absolute top-1/2 left-4 transform -translate-y-1/2 z-20">
+        <Button onClick={prevSlide} variant="" size="icon" className="rounded-full bg-white/10 backdrop-blur-sm text-white hover:bg-white/20">
+          <ArrowLeft className="h-6 w-6" />
+        </Button>
+      </div> */}
+
+      {/* <div className="absolute top-1/2 right-4 transform -translate-y-1/2 z-20">
+        <Button onClick={nextSlide} variant="outline" size="icon" className="rounded-full bg-white/10 backdrop-blur-sm text-white hover:bg-white/20">
+          <ArrowRight className="h-6 w-6" />
+        </Button>
+      </div> */}
+
+      <div className="absolute top-1/2 left-4 transform -translate-y-1/2 z-20">
+      <a onClick={prevSlide} className="text-gray-600 bg-white/10 hover:bg-white/20 transition-all duration-300 cursor-pointer">
         <ArrowLeft className="h-6 w-6" />
-      </Button>
-      <Button
-        variant="outline"
-        size="icon"
-        className="absolute right-4 top-1/2 -translate-y-1/2 rounded-full z-20 bg-white/10 text-white hover:bg-white/20 border-none"
-        onClick={nextSlide}
-      >
+      </a>
+      </div>
+      <div className="absolute top-1/2 right-4 transform -translate-y-1/2 z-20">
+      <a onClick={prevSlide} className="text-gray-600 bg-white/10 hover:bg-white/20 transition-all duration-300 cursor-pointer">
         <ArrowRight className="h-6 w-6" />
-      </Button>
+      </a>
+      </div>
+      
+      
+
+      {/* Social Links */}
+      <div className="absolute bottom-8 left-8 z-20">
+        <div ref={socialRef} className="flex flex-col space-y-4 reveal-scale delay-500">
+              <a 
+                href="https://github.com/EwilAscanio" /* TODO: Add your GitHub profile URL */
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 rounded-full glass-card flex items-center justify-center text-white hover:text-primary hover:scale-110 transition-all duration-300"
+              >
+                <Github className="w-5 h-5" />
+              </a>
+              <a 
+                href="https://www.linkedin.com/in/" /* TODO: Add your LinkedIn profile URL */
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 rounded-full glass-card flex items-center justify-center text-white hover:text-primary hover:scale-110 transition-all duration-300 "
+              >
+                <Linkedin className="w-5 h-5" />
+              </a>
+        </div>
+      </div>
+
+      {/* Scroll indicator */}
+      <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 z-20">
+        <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
+          <div className="w-1 h-3 bg-white rounded-full mt-2 animate-bounce"></div>
+        </div>
+      </div>
     </section>
   )
 }
