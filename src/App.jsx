@@ -11,6 +11,7 @@ import { VideosLiveSection } from "@/components/videos-live-section"
 import { Navbar } from "@/components/navbar"
 import Hero from "../components/Hero"
 import HeroSection from "../components/HeroSection"
+import MarqueeTechnologies from "../components/MarqueeTechnologies"
 
 
 export default function App() {
@@ -32,6 +33,12 @@ export default function App() {
         <section id="inicio">
         <HeroSection />
         </section>
+
+        {/* Sección de Tecnologías (Marquesina) 
+        <section>
+          <MarqueeTechnologies />
+        </section>
+        */}
 
         {/* Sección sobre mí */}
         <section id="sobre-mí">

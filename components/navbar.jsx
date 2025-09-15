@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react"
 import { ThemeToggle } from "@/components/theme-toggle"
 import Logo from "../public/logo.jpg"
-import Logo2 from "../public/logo2.png"
+
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -55,7 +55,7 @@ export function Navbar() {
             isScrolled ? "scale-95" : "scale-100"
           }`}
         >
-          <img src={Logo2} alt="" className=" h-14 w-auto object-cover drop-shadow-gray-600 drop-shadow-sm" />
+          <img src="/logo2.png" alt="" className=" h-14 w-auto object-cover drop-shadow-gray-600 drop-shadow-sm" />
           
         </div>
 
