@@ -14,24 +14,18 @@ const HeroSection = () => {
   const slides = [
     {
       image: '/slide1.webp',
-      title: 'Desarrollador Frontend',
-      subtitle: 'Especializado en React, JavaScript y tecnologías modernas. Transformo ideas en aplicaciones web innovadoras y funcionales que impulsan el éxito de tu negocio.',
-      cta: 'Ver Proyectos',
-      ctaLink: '#proyectos',
+      title: 'Innovación Visual al Servicio de tu Marca',
+      subtitle: 'Estrategias creativas y ejecución impecable para posicionar tu negocio en la era digital. Porque lo visual no es decoración, es comunicación.',
     },
     {
       image: '/slide2.webp',
-      title: 'Desarrollo Web de Alto Impacto',
-      subtitle: 'Creo experiencias digitales excepcionales que impulsan tu negocio. Especializado en desarrollo full-stack con tecnologías modernas y diseño centrado en el usuario.',
-      cta: 'Contactar',
-      ctaLink: '#contacto',
+      title: 'Diseño con Propósito, Resultados con Impacto',
+      subtitle: 'Transformo ideas en experiencias digitales que conectan, convierten y perduran. Cada proyecto es una oportunidad para superar expectativas.',
     },
     {
       image: '/hero-bg.jpg',
-      title: 'Agencia de desarrollo Web',
-      subtitle: 'Creando experiencias digitales extraordinarias con código limpio, diseño elegante y tecnologías de vanguardia.',
-      cta: 'Saber Más',
-      ctaLink: '#sobre-mi',
+      title: 'Tu Visión, Mi Compromiso Profesional',
+      subtitle: 'Colaboro contigo para construir soluciones a medida: diseño, desarrollo y estrategia unidos en un solo objetivo — tu éxito',
     },
   ]
 
@@ -121,6 +115,8 @@ const HeroSection = () => {
               </span>
             ))}
           </p>
+         <br></br>
+         <br></br>
          
           <div className={`flex flex-col sm:flex-row gap-4 justify-center items-center mb-12 reveal-bounce ${buttonsVisible ? 'visible' : ''}`}>
             <button
