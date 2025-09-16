@@ -72,28 +72,6 @@ export function SkillsSection() {
             </div>
           ))}
         </div>
-
-        <div
-          className={`mt-16 text-center transition-all duration-1000 delay-800 ease-out ${
-            sectionVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-          }`}
-        >
-          <h3 className="text-2xl font-bold mb-8 text-blue-600 dark:text-gray-300 [text-shadow:2px_2px_4px_rgba(0,0,0,0.2)] dark:[text-shadow:2px_2px_4px_rgba(0,0,0,0.1)]">
-            Certificaciones
-          </h3>
-          <div ref={certsRef} className="flex flex-wrap justify-center gap-4">
-            {["React Developer", "JavaScript Expert", "Node.js Certified", "AWS Cloud"].map((cert, index) => (
-              <div
-                key={index}
-                className={`px-6 py-3 bg-card border border-border rounded-lg shadow-sm hover:shadow-md transition-all duration-500 ease-out ${
-                  visibleCerts.has(index) ? "opacity-100 translate-y-0 rotate-0" : "opacity-0 translate-y-8 rotate-1"
-                }`}
-              >
-                <span className="font-medium text-card-foreground">{cert}</span>
-              </div>
-            ))}
-          </div>
-        </div>
       </div>
     </section>
   )

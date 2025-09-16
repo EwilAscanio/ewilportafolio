@@ -75,7 +75,7 @@ export function AboutSection() {
               <h3 className="text-2xl font-bold mb-4 text-blue-600 dark:text-gray-300 leading-tight [text-shadow:2px_2px_4px_rgba(0,0,0,0.2)] dark:[text-shadow:2px_2px_4px_rgba(0,0,0,0.1)]">
                 ¡Hola! Soy un desarrollador web apasionado
               </h3>
-              <p className="text-muted-foreground leading-relaxed text-lg">
+              <p className="text-muted-foreground leading-relaxed text-lg text-justify">
                 Con más de 3 años de experiencia en el desarrollo web, me especializo en crear aplicaciones modernas y
                 funcionales utilizando las últimas tecnologías. Mi pasión por el código limpio y las mejores prácticas
                 me impulsa a entregar soluciones de alta calidad.
@@ -84,7 +84,7 @@ export function AboutSection() {
 
             <div>
               <h4 className="text-xl font-semibold text-blue-600 dark:text-gray-300 mb-3 [text-shadow:2px_2px_4px_rgba(0,0,0,0.2)] dark:[text-shadow:2px_2px_4px_rgba(0,0,0,0.1)]">Mi Enfoque</h4>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-muted-foreground leading-relaxed text-justify">
                 Creo en la importancia de entender las necesidades del cliente para crear soluciones que no solo
                 funcionen perfectamente, sino que también ofrezcan una experiencia de usuario excepcional. Cada proyecto
                 es una oportunidad para innovar y superar expectativas.

@@ -3,6 +3,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { useScrollAnimation, useStaggerAnimation } from "../hooks/use-scroll-animation"
+import { Eye, Code } from "lucide-react"
 
 /**
  * Sección de portafolio con tarjetas 3D interactivas y animaciones de entrada
@@ -101,20 +102,24 @@ export function PortfolioSection() {
                   ))}
                 </div>
 
-                {/* Botón de acción */}
-                <Button
-                  variant="outline"
-                  className="w-full hover:bg-primary hover:text-primary-foreground transition-colors duration-300 bg-transparent"
-                >
-                  Ver Proyecto
-                </Button>
+                {/* Botones de acción */}
+                <div className="flex gap-2">
+                  <Button
+                    variant="outline"
+                    className="flex-1 text-white hover:bg-primary hover:text-primary transition-colors duration-300 bg-transparent"
+                  >
+                    <Eye className="w-4 h-4 mr-2" />
+                    Ver Proyecto
+                  </Button>
 
-                <Button
-                  variant="outline"
-                  className="w-full hover:bg-primary hover:text-primary-foreground transition-colors duration-300 bg-transparent"
-                >
-                  Codigo
-                </Button>
+                  <Button
+                    variant="outline"
+                    className="flex-1 text-white hover:bg-primary hover:text-primary transition-colors duration-300 bg-transparent"
+                  >
+                    <Code className="w-4 h-4 mr-2" />
+                    Código
+                  </Button>
+                </div>
               </CardContent>
             </Card>
           ))}
