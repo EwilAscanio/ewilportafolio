@@ -20,9 +20,15 @@ export function Footer() {
   return (
     <footer
       ref={footerRef}
-      className={`bg-gradient-to-br from-card to-background border-t border-border transition-all duration-1000 ease-out ${
+      className={`border-t border-border transition-all duration-1000 ease-out ${
         footerVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
       }`}
+      style={{
+        backgroundImage: 'url(/images/footer.jpg)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}
     >
       <div className="max-w-6xl mx-auto px-4 py-16">
         {/* Sección principal del footer */}
@@ -62,11 +68,27 @@ export function Footer() {
             </div>
           </div>
 
+          
+
+          {/* Recursos */}
+          {/* <div>
+            <h4 className="text-lg font-semibold text-foreground mb-4">Recursos</h4>
+            <ul className="space-y-2">
+              {["Descargas Gratuitas", "Videos Tutoriales", "Blog", "Newsletter"].map((item, index) => (
+                <li key={index}>
+                  <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300">
+                    {item}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div> */}
+
           {/* Enlaces rápidos */}
-          <div>
+          <div className="lg:col-start-4">
             <h4 className="text-lg font-semibold text-foreground mb-4">Enlaces Rápidos</h4>
             <ul className="space-y-2">
-              {["Sobre Mí", "Proyectos", "Habilidades", "Contacto"].map((item, index) => (
+              {["Inicio", "Sobre Mí", "Proyectos", "Habilidades", "Reels", "Descargas", "Videos", "Contacto"].map((item, index) => (
                 <li key={index}>
                   <button
                     onClick={() => scrollToSection(item.toLowerCase().replace(" ", "-"))}
@@ -78,24 +100,10 @@ export function Footer() {
               ))}
             </ul>
           </div>
-
-          {/* Recursos */}
-          <div>
-            <h4 className="text-lg font-semibold text-foreground mb-4">Recursos</h4>
-            <ul className="space-y-2">
-              {["Descargas Gratuitas", "Videos Tutoriales", "Blog", "Newsletter"].map((item, index) => (
-                <li key={index}>
-                  <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300">
-                    {item}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
         </div>
 
         {/* Call to action */}
-        <div className="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-2xl p-8 text-center mb-8">
+        {/* <div className="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-2xl p-8 text-center mb-8">
           <h3 className="text-2xl font-bold text-primary mb-4">¿Listo para crear algo increíble?</h3>
           <p className="text-muted-foreground max-w-2xl mx-auto mb-6">
             Cada proyecto es una oportunidad para innovar y superar expectativas. Trabajemos juntos para hacer
@@ -107,7 +115,7 @@ export function Footer() {
           >
             Empezar Proyecto
           </button>
-        </div>
+        </div> */}
 
         {/* Copyright */}
         <div className="border-t border-border pt-8 flex flex-col md:flex-row justify-between items-center">
