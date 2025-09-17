@@ -11,16 +11,18 @@ export function SkillsSection() {
     threshold: 0.1,
     triggerOnce: true,
   })
-  const { containerRef: skillsRef, visibleItems: visibleSkills } = useStaggerAnimation(6, 150)
+  const { containerRef: skillsRef, visibleItems: visibleSkills } = useStaggerAnimation(8, 150)
   const { containerRef: certsRef, visibleItems: visibleCerts } = useStaggerAnimation(4, 100)
 
   const skills = [
-    { name: "JavaScript", level: 95, color: "bg-yellow-500" },
-    { name: "React", level: 90, color: "bg-blue-500" },
-    { name: "Node.js", level: 85, color: "bg-green-500" },
+    { name: "HTML", level: 96, color: "bg-red-500" },
     { name: "CSS/Tailwind", level: 88, color: "bg-purple-500" },
-    { name: "MongoDB", level: 80, color: "bg-green-600" },
+    { name: "JavaScript", level: 94, color: "bg-yellow-500" },
+    { name: "React", level: 90, color: "bg-blue-500" },
+    { name: "Next JS", level: 88, color: "bg-green-500" },
+    { name: "MariaDB", level: 80, color: "bg-green-600" },
     { name: "Git", level: 92, color: "bg-orange-500" },
+    { name: "Inteligencia Arficial", level: 70, color: "bg-lime-500" },
   ]
 
   return (
@@ -41,7 +43,7 @@ export function SkillsSection() {
             <span className="text-primary">Técnicas</span>
           </h2>
           <div className="w-20 h-1 bg-blue-600 mx-auto" />
-          <p className="text-xl text-muted-foreground mt-4">Tecnologías que domino y utilizo en mis proyectos</p>
+          <p className="text-xl text-muted-foreground mt-4">Tecnologías que utilizo en mis proyectos</p>
         </div>
 
         <div ref={skillsRef} className="grid grid-cols-1 md:grid-cols-2 gap-8">

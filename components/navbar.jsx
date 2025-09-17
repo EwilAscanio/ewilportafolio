@@ -2,12 +2,13 @@
 
 import { useState, useEffect } from "react"
 import { ThemeToggle } from "@/components/theme-toggle"
-import Logo from "../public/logo.jpg"
+
 
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [activeSection, setActiveSection] = useState("inicio")
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -59,7 +60,7 @@ export function Navbar() {
           
         </div>
 
-        {/* Menú de navegación */}
+        {/* Menú de navegación - Desktop */}
         <div className="hidden md:flex space-x-8">
           {[
             { name: "Inicio", id: "inicio" },
@@ -86,11 +87,78 @@ export function Navbar() {
           ))}
         </div>
 
-        {/* Toggle de tema */}
-        <div className={`transition-all duration-300 ${isScrolled ? "scale-95" : "scale-100"}`}>
-          <ThemeToggle />
+        {/* Botones de la derecha - Mobile y Desktop */}
+        <div className="flex items-center space-x-4">
+          {/* Botón hamburguesa - Mobile */}
+          <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className={`md:hidden p-2 rounded-lg transition-all duration-300 hover:bg-white/10 ${
+              isScrolled ? "scale-95" : "scale-100"
+            }`}
+          >
+            <svg
+              className="w-6 h-6 text-white"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              {isMobileMenuOpen ? (
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              ) : (
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              )}
+            </svg>
+          </button>
+
+          {/* Toggle de tema */}
+          <div className={`transition-all duration-300 ${isScrolled ? "scale-95" : "scale-100"}`}>
+            <ThemeToggle />
+          </div>
         </div>
       </div>
+
+      {/* Menú móvil */}
+      {isMobileMenuOpen && (
+        <div className="md:hidden bg-black/90 backdrop-blur-lg border-t border-white/20">
+          <div className="max-w-6xl mx-auto px-4 py-4">
+            <div className="flex flex-col space-y-4">
+              {[
+                { name: "Inicio", id: "inicio" },
+                { name: "Sobre Mí", id: "sobre-mí" },
+                { name: "Proyectos", id: "proyectos" },
+                { name: "Habilidades", id: "habilidades" },
+                { name: "Reels", id: "reels" },
+                { name: "Descargas", id: "descargas" },
+                { name: "Videos", id: "videos" },
+                { name: "Contacto", id: "contacto" },
+              ].map((item, index) => (
+                <button
+                  key={index}
+                  onClick={() => {
+                    scrollToSection(item.id)
+                    setIsMobileMenuOpen(false) // Cerrar menú al hacer clic
+                  }}
+                  className={`text-left font-medium transition-all duration-300 hover:text-blue-600 ${
+                    activeSection === item.id ? "text-blue-600" : "text-white/90"
+                  }`}
+                >
+                  {item.name}
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
     </nav>
   )
 }
