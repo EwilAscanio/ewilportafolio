@@ -80,7 +80,7 @@ export function InstagramReelsSection() {
             }`}
           >
             <a
-              href="https://instagram.com/tu_usuario"
+              href="https://instagram.com/ewilascanio"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-500 to-blue-700 text-white px-8 py-4 rounded-full font-semibold hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"

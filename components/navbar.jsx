@@ -15,7 +15,7 @@ export function Navbar() {
       setIsScrolled(window.scrollY > 50)
 
       // Detectar sección activa
-      const sections = ["inicio", "sobre-mí", "proyectos", "habilidades", "reels", "descargas", "videos", "contacto"]
+      const sections = ["inicio", "sobre-mí", "proyectos", "habilidades", "my-services" ,"reels", "descargas", "videos", "contacto"]
       const currentSection = sections.find((section) => {
         const element = document.getElementById(section)
         if (element) {
@@ -67,9 +67,10 @@ export function Navbar() {
             { name: "Sobre Mí", id: "sobre-mí" },
             { name: "Proyectos", id: "proyectos" },
             { name: "Habilidades", id: "habilidades" },
-            { name: "Reels", id: "reels" },
-            { name: "Descargas", id: "descargas" },
-            { name: "Videos", id: "videos" },
+            { name: "Mis Servicios", id: "my-services" },
+            //{ name: "Reels", id: "reels" },
+            //{ name: "Descargas", id: "descargas" },
+            //{ name: "Videos", id: "videos" },
             { name: "Contacto", id: "contacto" },
           ].map((item, index) => (
             <button

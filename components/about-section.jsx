@@ -46,7 +46,8 @@ export function AboutSection() {
           >
             <div className="relative overflow-hidden rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-500">
               <img
-                src="/professional-developer-portrait-in-modern-office.jpg"
+                //src="/professional-developer-portrait-in-modern-office.jpg"
+                src="/sobremi.png"
                 alt="Foto profesional del desarrollador"
                 className="w-full h-[500px] object-cover"
               />

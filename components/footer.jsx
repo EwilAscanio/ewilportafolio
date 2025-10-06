@@ -36,7 +36,7 @@ export function Footer() {
           {/* Información personal */}
           <div className="lg:col-span-2">
             <h3 className="text-2xl font-bold text-primary mb-4">Desarrollador Full Stack</h3>
-            <p className="text-muted-foreground mb-6 leading-relaxed">
+            <p className="text-white mb-6 leading-relaxed">
               Especializado en crear experiencias web extraordinarias con las últimas tecnologías. Cada línea de
               código es una oportunidad para innovar y superar expectativas.
             </p>
@@ -86,13 +86,13 @@ export function Footer() {
 
           {/* Enlaces rápidos */}
           <div className="lg:col-start-4">
-            <h4 className="text-lg font-semibold text-foreground mb-4">Enlaces Rápidos</h4>
+            <h4 className="text-lg font-semibold text-primary mb-4">Enlaces Rápidos</h4>
             <ul className="space-y-2">
-              {["Inicio", "Sobre Mí", "Proyectos", "Habilidades", "Reels", "Descargas", "Videos", "Contacto"].map((item, index) => (
+              {["Inicio", "Sobre Mí", "Proyectos", "Habilidades", "Contacto"].map((item, index) => (
                 <li key={index}>
                   <button
                     onClick={() => scrollToSection(item.toLowerCase().replace(" ", "-"))}
-                    className="text-muted-foreground hover:text-primary transition-colors duration-300"
+                    className="text-white hover:text-primary transition-colors duration-300"
                   >
                     {item}
                   </button>

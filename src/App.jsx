@@ -12,6 +12,7 @@ import { Footer } from "@/components/footer"
 import Hero from "../components/Hero"
 import HeroSection from "../components/HeroSection"
 import MarqueeTechnologies from "../components/MarqueeTechnologies"
+import MyServices from "../components/MyServices"
 
 
 export default function App() {
@@ -50,20 +51,27 @@ export default function App() {
           <SkillsSection />
         </section>
 
-        {/* Sección de Instagram Reels */}
+        <section id="my-services">
+          <MyServices />
+        </section>
+
+        {/* Sección de Instagram Reels 
         <section id="reels">
           <InstagramReelsSection />
         </section>
+          */}
 
-        {/* Sección de descargas gratuitas */}
+        {/* Sección de descargas gratuitas 
         <section id="descargas">
           <FreeDownloadsSection />
         </section>
+        */}
 
-        {/* Sección de videos y live streams */}
+        {/* Sección de videos y live streams 
         <section id="videos">
           <VideosLiveSection />
         </section>
+        */}
 
         {/* Sección de contacto */}
         <section id="contacto">
