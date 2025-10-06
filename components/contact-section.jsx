@@ -1,9 +1,12 @@
 "use client"
 
 import { useState } from "react"
+import emailjs from '@emailjs/browser'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { useScrollAnimation } from "@/hooks/use-scroll-animation"
+import { useToast } from "@/hooks/use-toast"
+import { Send } from "lucide-react"
 
 /**
  * Sección de contacto con formulario interactivo
@@ -16,8 +19,14 @@ export function ContactSection() {
     phone: "",
     message: "",
   })
+  const [isLoading, setIsLoading] = useState(false)
 
   const { elementRef, isVisible } = useScrollAnimation()
+  const { toast } = useToast()
+
+  const serviceID = 'service_a96v7zl';
+  const templateID = 'template_j7hs76d';
+  const publicKey = 'z1oE1xyE07gj9BSWY';
 
   const handleInputChange = (e) => {
     const { name, value } = e.target
@@ -29,10 +38,37 @@ export function ContactSection() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    // Aquí iría la lógica para enviar el formulario
-    console.log("Formulario enviado:", formData)
-    alert("¡Mensaje enviado! Te contactaré pronto.")
-    setFormData({ name: "", email: "", phone: "", message: "" })
+    setIsLoading(true)
+
+    const templateParams = {
+      name: formData.name,
+      email: formData.email,
+      to_name: 'ewilascanio.com', // Puedes cambiar esto
+      message: formData.message,
+      phone: formData.phone,
+    };
+
+    emailjs.send(serviceID, templateID, templateParams, publicKey)
+      .then((result) => {
+        toast({
+          title: "¡Mensaje enviado! 💻",
+          description: "Te contactaré pronto para aclarar cualquier duda.",
+        });
+
+        console.log("Email enviado:", result.text)
+        setFormData({ name: "", email: "", phone: "", message: "" })
+      })
+      .catch((error) => {
+        console.error("Error al enviar email:", error.text)
+        toast({
+          title: "Error al enviar mensaje",
+          description: "Por favor, intenta de nuevo más tarde.",
+          variant: "destructive",
+        })
+      })
+      .finally(() => {
+        setIsLoading(false)
+      })
   }
 
   const contactInfo = [
@@ -242,9 +278,11 @@ export function ContactSection() {
 
                 <Button
                   type="submit"
-                  className="w-full bg-primary hover:bg-primary/90 text-primary-foreground transition-colors duration-300"
+                  disabled={isLoading}
+                  className="w-full bg-primary hover:bg-primary/90 text-primary-foreground transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  Enviar Mensaje
+                  {isLoading ? "Enviando..." : "Enviar Mensaje"}
+                  <Send size={16} className="button-icon" />
                 </Button>
               </form>
             </CardContent>

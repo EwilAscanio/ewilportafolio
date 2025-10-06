@@ -14,7 +14,7 @@ export function PortfolioSection() {
     threshold: 0.1,
     triggerOnce: true,
   })
-  const { containerRef: projectsRef, visibleItems: visibleProjects } = useStaggerAnimation(3, 200)
+  const { containerRef: projectsRef, visibleItems: visibleProjects } = useStaggerAnimation(4, 200)
 
   const projects = [
     {
@@ -25,19 +25,30 @@ export function PortfolioSection() {
       link: "#",
     },
     {
+      title: "Pagina Web Personal",
+      description: "Escaparate digital para destacar tu marca y servicios.",
+      image: "/pagesoymaho.jpg",
+      tech: ["React", "Tailwind CSS", "Javascript",],
+      linkCode: "https://github.com/EwilAscanio/soymahorodriguez",
+      linkProject: "https://www.soymahorodriguez.com/",
+    },
+    
+    {
+      title: "Sistema de Asistencia",
+      description: "Panel de control con visualización de datos en tiempo real",
+      image: "/dashboarasistencia.jpg",
+      tech: ["Next JS", "Tailwind CSS", "PostgresSQL",],
+      linkCode: "https://github.com/EwilAscanio/AppIelfa",
+      linkProject: "https://app-ielfa.vercel.app/",
+    },
+    {
       title: "E-commerce Moderno",
       description: "Plataforma de comercio electrónico con React y Node.js",
       image: "/modern-ecommerce-interface.png",
       tech: ["React", "MariaDB", "Javascript"],
       link: "#",
     },
-    {
-      title: "Sistema de Asistencia",
-      description: "Panel de control con visualización de datos en tiempo real",
-      image: "/analytics-dashboard.png",
-      tech: ["Next JS", "Tailwind CSS", "MariaDB"],
-      link: "#",
-    },
+   
    
   ]
 
@@ -106,18 +117,24 @@ export function PortfolioSection() {
                 <div className="flex gap-2">
                   <Button
                     variant="outline"
-                    className="flex-1 text-white hover:bg-primary hover:text-primary transition-colors duration-300 bg-transparent"
+                    asChild
+                    className="flex-1 text-primary hover:bg-primary hover:text-foreground transition-colors duration-300 bg-transparent"
                   >
-                    <Eye className="w-4 h-4 mr-2" />
-                    Ver Proyecto
+                    <a href={project.linkProject} target="_blank" rel="noopener noreferrer">
+                      <Eye className="w-4 h-4 mr-2" />
+                      Ver Proyecto
+                    </a>
                   </Button>
 
                   <Button
                     variant="outline"
-                    className="flex-1 text-white hover:bg-primary hover:text-primary transition-colors duration-300 bg-transparent"
+                    asChild
+                    className="flex-1 text-primary hover:bg-primary hover:text-foreground transition-colors duration-300 bg-transparent"
                   >
-                    <Code className="w-4 h-4 mr-2" />
-                    Código
+                    <a href={project.linkCode} target="_blank" rel="noopener noreferrer">
+                      <Code className="w-4 h-4 mr-2" />
+                      Código
+                    </a>
                   </Button>
                 </div>
               </CardContent>

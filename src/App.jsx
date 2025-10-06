@@ -9,6 +9,7 @@ import { FreeDownloadsSection } from "@/components/free-downloads-section"
 import { VideosLiveSection } from "@/components/videos-live-section"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
+import { Toaster } from "@/components/ui/toaster"
 import Hero from "../components/Hero"
 import HeroSection from "../components/HeroSection"
 import MarqueeTechnologies from "../components/MarqueeTechnologies"
@@ -17,8 +18,7 @@ import MyServices from "../components/MyServices"
 
 export default function App() {
   return (
-    // The html and body tags are handled by index.html
-    // Applying font classes directly to the root div or via global CSS
+
     <div className="font-sans antialiased min-h-screen bg-background">
       <Navbar />
 
@@ -83,6 +83,9 @@ export default function App() {
 
       {/* Botón flotante de WhatsApp */}
       <WhatsAppButton />
+
+      {/* Toaster para notificaciones */}
+      <Toaster />
     </div>
   )
 }
