@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button"
  * Componente para alternar entre tema claro y oscuro
  * Utiliza localStorage para persistir la preferencia del usuario
  */
-export function ThemeToggle() {
+const ThemeToggle = () => {
   const [isDark, setIsDark] = useState(false)
 
   // Efecto para cargar el tema guardado al montar el componente
@@ -68,3 +68,4 @@ export function ThemeToggle() {
     </Button>
   )
 }
+export default ThemeToggle;

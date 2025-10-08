@@ -6,7 +6,7 @@ import { useScrollAnimation, useStaggerAnimation } from "../hooks/use-scroll-ani
  * Sección de habilidades con barras de progreso animadas y efectos de entrada
  * Muestra las tecnologías y nivel de experiencia
  */
-export function SkillsSection() {
+const SkillsSection = () => {
   const { elementRef: sectionRef, isVisible: sectionVisible } = useScrollAnimation({
     threshold: 0.1,
     triggerOnce: true,
@@ -78,3 +78,4 @@ export function SkillsSection() {
     </section>
   )
 }
+export default SkillsSection;

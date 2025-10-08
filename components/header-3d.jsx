@@ -7,7 +7,7 @@ import { useScrollAnimation } from "../hooks/use-scroll-animation"
  * Componente de encabezado con efecto 3D y animaciones de entrada
  * Incluye animaciones interactivas, foto personal y llamada a la acción
  */
-export function Header3D() {
+const Header3D = () => {
   const [isHovered, setIsHovered] = useState(false)
 
   const { elementRef: headerRef, isVisible: headerVisible } = useScrollAnimation({
@@ -172,3 +172,4 @@ export function Header3D() {
     </div>
   )
 }
+export default Header3D;

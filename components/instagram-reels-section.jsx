@@ -7,7 +7,7 @@ import { useScrollAnimation, useStaggerAnimation } from "../hooks/use-scroll-ani
  * Sección de Instagram Reels y Videos con animaciones de entrada
  * Muestra contenido de redes sociales con efectos visuales
  */
-export function InstagramReelsSection() {
+const InstagramReelsSection = () => {
   const [activeReel, setActiveReel] = useState(0)
 
   const { elementRef: sectionRef, isVisible: sectionVisible } = useScrollAnimation({
@@ -181,3 +181,4 @@ export function InstagramReelsSection() {
     </section>
   )
 }
+export default InstagramReelsSection;

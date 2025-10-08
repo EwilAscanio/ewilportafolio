@@ -1,12 +1,11 @@
 "use client"
-
 import { useScrollAnimation, useStaggerAnimation } from "../hooks/use-scroll-animation"
 
 /**
  * Sección Sobre Mí con animaciones de entrada
  * Información personal y profesional del desarrollador
  */
-export function AboutSection() {
+const AboutSection = () => {
   const { elementRef: sectionRef, isVisible: sectionVisible } = useScrollAnimation({
     threshold: 0.1,
     triggerOnce: true,
@@ -47,7 +46,7 @@ export function AboutSection() {
             <div className="relative overflow-hidden rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-500">
               <img
                 //src="/professional-developer-portrait-in-modern-office.jpg"
-                src="/sobremi.png"
+                src="/sobremi.webp"
                 alt="Foto profesional del desarrollador"
                 className="w-full h-[500px] object-cover"
               />
@@ -139,3 +138,5 @@ export function AboutSection() {
     </section>
   )
 }
+export default AboutSection;
+

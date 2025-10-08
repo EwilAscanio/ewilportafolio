@@ -1,7 +1,5 @@
 "use client"
 
-import React from 'react';
-// Iconos de Lucide React
 import {
   Server,
   Code,
@@ -13,7 +11,7 @@ import {
 } from 'lucide-react';
 import { useScrollAnimation, useStaggerAnimation } from '../hooks/use-scroll-animation';
 
-export const MyServices = () => {
+const MyServices = () => {
   const { elementRef: sectionRef, isVisible: sectionVisible } = useScrollAnimation({
     threshold: 0.1,
     triggerOnce: true,

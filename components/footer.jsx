@@ -4,7 +4,7 @@ import { useScrollAnimation } from "../hooks/use-scroll-animation"
  * Componente Footer mejorado con animaciones de entrada
  * Contiene información personal, enlaces rápidos, recursos y call to action
  */
-export function Footer() {
+const Footer = () => {
   const { elementRef: footerRef, isVisible: footerVisible } = useScrollAnimation({
     threshold: 0.1,
     triggerOnce: true,
@@ -126,3 +126,4 @@ export function Footer() {
     </footer>
   )
 }
+export default Footer;

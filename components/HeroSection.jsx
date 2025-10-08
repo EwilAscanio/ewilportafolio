@@ -1,15 +1,14 @@
-import * as React from 'react'
 import { ArrowLeft, ArrowRight } from 'lucide-react'
 import { Github, Linkedin } from "lucide-react";
 import { useRevealAnimation } from "../hooks/useRevealAnimation"
-import { Button } from '@/components/ui/button'
+import { useState, useEffect, useCallback } from 'react';
 
 const HeroSection = () => {
-  const [activeIndex, setActiveIndex] = React.useState(0)
-  const [animationKey, setAnimationKey] = React.useState(0)
+  const [activeIndex, setActiveIndex] = useState(0)
+  const [animationKey, setAnimationKey] = useState(0)
 
   const socialRef = useRevealAnimation();
-  const [buttonsVisible, setButtonsVisible] = React.useState(false);
+  const [buttonsVisible, setButtonsVisible] = useState(false);
 
   const slides = [
     {
@@ -32,7 +31,7 @@ const HeroSection = () => {
   const subtitleWords = slides[activeIndex].subtitle.split(' ');
   const subtitleAnimationDuration = (subtitleWords.length * 0.08 + 0.5) * 1000; // in ms
 
-  React.useEffect(() => {
+  useEffect(() => {
     setButtonsVisible(false);
     const timer = setTimeout(() => {
       setButtonsVisible(true);
@@ -41,7 +40,7 @@ const HeroSection = () => {
     return () => clearTimeout(timer);
   }, [animationKey, subtitleAnimationDuration]);
 
-  const nextSlide = React.useCallback(() => {
+  const nextSlide = useCallback(() => {
     setActiveIndex((prevIndex) =>
       prevIndex === slides.length - 1 ? 0 : prevIndex + 1
     )
@@ -57,14 +56,14 @@ const HeroSection = () => {
     setActiveIndex(index);
   }
 
-  React.useEffect(() => {
+  useEffect(() => {
     const interval = setInterval(() => {
       nextSlide();
     }, 5000); // Change slide every 5 seconds
     return () => clearInterval(interval);
   }, [nextSlide]);
 
-  React.useEffect(() => {
+  useEffect(() => {
     setAnimationKey(prevKey => prevKey + 1);
   }, [activeIndex]);
 
@@ -200,4 +199,4 @@ const HeroSection = () => {
   )
 }
 
-export default HeroSection
+export default HeroSection;

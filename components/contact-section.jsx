@@ -12,7 +12,7 @@ import { Send } from "lucide-react"
  * Sección de contacto con formulario interactivo
  * Incluye información de contacto y redes sociales
  */
-export function ContactSection() {
+const ContactSection = () =>{
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -292,3 +292,4 @@ export function ContactSection() {
     </section>
   )
 }
+export default ContactSection;

@@ -9,7 +9,7 @@ import { Eye, Code } from "lucide-react"
  * Sección de portafolio con tarjetas 3D interactivas y animaciones de entrada
  * Muestra proyectos destacados con efectos visuales
  */
-export function PortfolioSection() {
+const PortfolioSection = () => {
   const { elementRef: sectionRef, isVisible: sectionVisible } = useScrollAnimation({
     threshold: 0.1,
     triggerOnce: true,
@@ -145,3 +145,4 @@ export function PortfolioSection() {
     </section>
   )
 }
+export default PortfolioSection;

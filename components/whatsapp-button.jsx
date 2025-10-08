@@ -4,7 +4,7 @@
  * Botón flotante de WhatsApp con animación de pulso
  * Configurado para abrir chat con número predefinido
  */
-export function WhatsAppButton() {
+const WhatsAppButton = () =>{
   // Número de WhatsApp (cambiar por el número real)
   const phoneNumber = "4145942817" // Formato: código de país + número sin espacios ni símbolos
   const message = "¡Hola! Me interesa conocer más sobre tus servicios de desarrollo web."
@@ -26,3 +26,6 @@ export function WhatsAppButton() {
     </button>
   )
 }
+export default WhatsAppButton;
+
+

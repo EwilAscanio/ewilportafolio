@@ -1,11 +1,11 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { ThemeToggle } from "@/components/theme-toggle"
+import  ThemeToggle  from "@/components/theme-toggle"
 
 
 
-export function Navbar() {
+const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false)
   const [activeSection, setActiveSection] = useState("inicio")
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
@@ -163,3 +163,4 @@ export function Navbar() {
     </nav>
   )
 }
+export default Navbar;

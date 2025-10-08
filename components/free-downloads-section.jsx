@@ -234,3 +234,8 @@ export function FreeDownloadsSection() {
     </section>
   )
 }
+
+
+export default FreeDownloadsSection;
+
+

@@ -7,7 +7,7 @@ import { useScrollAnimation } from "@/hooks/use-scroll-animation"
  * Sección de Videos y Transmisiones en Vivo
  * Muestra contenido de video educativo y streams
  */
-export function VideosLiveSection() {
+const VideosLiveSection = () => {
   const [activeTab, setActiveTab] = useState("videos")
   const { elementRef, isVisible } = useScrollAnimation()
 
@@ -365,3 +365,4 @@ export function VideosLiveSection() {
     </section>
   )
 }
+export default VideosLiveSection;
