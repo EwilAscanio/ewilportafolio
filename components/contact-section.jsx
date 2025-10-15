@@ -24,9 +24,9 @@ const ContactSection = () =>{
   const { elementRef, isVisible } = useScrollAnimation()
   const { toast } = useToast()
 
-  const serviceID = 'service_a96v7zl';
-  const templateID = 'template_j7hs76d';
-  const publicKey = 'z1oE1xyE07gj9BSWY';
+  const serviceID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+  const templateID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+  const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
   const handleInputChange = (e) => {
     const { name, value } = e.target
@@ -85,7 +85,7 @@ const ContactSection = () =>{
       ),
       title: "Email",
       value: "ewilascanio@gmail.com",
-      link: "mailto:desarrollador@email.com",
+      
     },
     {
       icon: (
@@ -100,7 +100,7 @@ const ContactSection = () =>{
       ),
       title: "Teléfono",
       value: "+58 (414) 594-2817",
-      link: "tel:+12345678900",
+      
     },
     {
       icon: (
@@ -116,7 +116,7 @@ const ContactSection = () =>{
       ),
       title: "Ubicación",
       value: "Ciudad de Valencia, Venezuela",
-      link: "#",
+      
     },
   ]
 
@@ -175,29 +175,15 @@ const ContactSection = () =>{
               </div>
             </div>
 
-            {/* Redes sociales */}
-            <div
-              className={`transition-all duration-800 ${
-                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-              }`}
-              style={{ transitionDelay: "600ms" }}
-            >
-              <h3 className="text-xl font-bold mb-4 text-blue-600 dark:text-gray-300 [text-shadow:2px_2px_4px_rgba(0,0,0,0.2)] dark:[text-shadow:2px_2px_4px_rgba(0,0,0,0.1)]">
-                Sígueme en
-              </h3>
-              <div className="flex space-x-4">
-                {["GitHub", "LinkedIn", "Twitter"].map((social, index) => (
-                  <Button
-                    key={index}
-                    variant="outline"
-                    size="sm"
-                    className="hover:bg-primary hover:text-primary-foreground transition-colors duration-300 bg-transparent"
-                  >
-                    {social}
-                  </Button>
-                ))}
-              </div>
-            </div>
+            {/* <div>
+              <h4 className="text-2xl font-bold mb-6 text-blue-600 dark:text-gray-300 [text-shadow:2px_2px_4px_rgba(0,0,0,0.2)] dark:[text-shadow:2px_2px_4px_rgba(0,0,0,0.1)]">
+              Cada proyecto sigue una metodología clara y estructurada. Desde la definición de objetivos hasta la entrega final, garantizo un proceso transparente y eficiente que supera expectativas.
+              </h4>
+              
+            </div> */}
+            
+
+            
           </div>
 
           {/* Formulario de contacto */}

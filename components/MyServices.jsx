@@ -114,7 +114,7 @@ const MyServices = () => {
           </p>
         </div>
 
-        {/* Contenedores de Servicios (Modelo 2) */}
+        {/* Contenedores de Servicios */}
         <div ref={servicesRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
           {services.map((service, index) => (
             <div
@@ -156,7 +156,7 @@ const MyServices = () => {
         >
   <a
     href="#contacto" // Puedes cambiar esto al ID de tu formulario de contacto
-    className="inline-flex items-center bg-blue-600 text-white text-xl font-bold py-4 px-12 rounded-full
+    className="inline-flex items-center bg-primary text-white text-xl font-bold py-4 px-12 rounded-full
                hover:bg-blue-700 transition-all duration-300 shadow-xl shadow-blue-500/50
                transform hover:scale-105"
   >

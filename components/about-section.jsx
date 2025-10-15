@@ -48,7 +48,7 @@ const AboutSection = () => {
                 //src="/professional-developer-portrait-in-modern-office.jpg"
                 src="/sobremi.webp"
                 alt="Foto profesional del desarrollador"
-                className="w-full h-[500px] object-cover"
+                className="w-full h-full object-cover"
               />
               {/* Overlay con gradiente */}
               <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent" />

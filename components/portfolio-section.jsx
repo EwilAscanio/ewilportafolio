@@ -43,10 +43,11 @@ const PortfolioSection = () => {
     },
     {
       title: "E-commerce Moderno",
-      description: "Plataforma de comercio electrónico con React y Node.js",
-      image: "/modern-ecommerce-interface.png",
-      tech: ["React", "MariaDB", "Javascript"],
-      link: "#",
+      description: "Plataforma de comercio electrónico con Next.js y PostgreSQL Conectado a tu sistema de inventario",
+      image: "/ecommerce.webp",
+      tech: ["Next JS", "Tailwind CSS", "PostgresSQL",],
+      linkCode: "https://github.com/EwilAscanio/TiendaKass",
+      linkProject: "https://tienda-kass.vercel.app/",
     },
    
    

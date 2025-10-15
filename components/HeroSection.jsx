@@ -2,6 +2,7 @@ import { ArrowLeft, ArrowRight } from 'lucide-react'
 import { Github, Linkedin } from "lucide-react";
 import { useRevealAnimation } from "../hooks/useRevealAnimation"
 import { useState, useEffect, useCallback } from 'react';
+import { Instagram } from 'lucide-react';
 
 const HeroSection = () => {
   const [activeIndex, setActiveIndex] = useState(0)
@@ -179,12 +180,12 @@ const HeroSection = () => {
                 <Github className="w-5 h-5" />
               </a>
               <a 
-                href="https://www.linkedin.com/in/" /* TODO: Add your LinkedIn profile URL */
+                href="https://www.instagram.com/ewilascanio/" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-12 h-12 rounded-full glass-card flex items-center justify-center text-white hover:text-primary hover:scale-110 transition-all duration-300 "
               >
-                <Linkedin className="w-5 h-5" />
+                <Instagram className="w-5 h-5" />
               </a>
         </div>
       </div>

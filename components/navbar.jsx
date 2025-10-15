@@ -65,8 +65,8 @@ const Navbar = () => {
           {[
             { name: "Inicio", id: "inicio" },
             { name: "Sobre Mí", id: "sobre-mí" },
+            { name: "Habilidades", id: "skill" },
             { name: "Proyectos", id: "proyectos" },
-            { name: "Habilidades", id: "habilidades" },
             { name: "Mis Servicios", id: "my-services" },
             //{ name: "Reels", id: "reels" },
             //{ name: "Descargas", id: "descargas" },

@@ -2,7 +2,6 @@ import  WhatsAppButton  from "@/components/whatsapp-button"
 import  Header3D  from "@/components/header-3d"
 import  AboutSection  from "@/components/about-section"
 import  PortfolioSection  from "@/components/portfolio-section"
-import  SkillsSection  from "@/components/skills-section"
 import  ContactSection  from "@/components/contact-section"
 import  InstagramReelsSection  from "@/components/instagram-reels-section"
 import  FreeDownloadsSection  from "@/components/free-downloads-section"
@@ -10,10 +9,9 @@ import  VideosLiveSection  from "@/components/videos-live-section"
 import  Navbar  from "@/components/navbar"
 import  Footer from "@/components/footer"
 import  Toaster  from "@/components/ui/toaster"
-import Hero from "../components/Hero"
 import HeroSection from "../components/HeroSection"
-import MarqueeTechnologies from "../components/MarqueeTechnologies"
 import MyServices from "../components/MyServices"
+import Skill from "../components/Skill"
 
 
 export default function App() {
@@ -30,15 +28,16 @@ export default function App() {
         <HeroSection />
         </section>
 
-        {/* Sección de Tecnologías (Marquesina) 
-        <section>
-          <MarqueeTechnologies />
-        </section>
-        */}
+        
 
         {/* Sección sobre mí */}
         <section id="sobre-mí">
           <AboutSection />
+        </section>
+        
+        {/* Sección de habilidades */}
+        <section id="skill">
+          <Skill />
         </section>
 
         {/* Sección de proyectos */}
@@ -46,14 +45,13 @@ export default function App() {
           <PortfolioSection />
         </section>
 
-        {/* Sección de habilidades */}
-        <section id="habilidades">
-          <SkillsSection />
-        </section>
 
         <section id="my-services">
           <MyServices />
         </section>
+
+        {/* Sección de proceso */}
+        
 
         {/* Sección de Instagram Reels 
         <section id="reels">
