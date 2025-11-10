@@ -93,7 +93,7 @@ const HeroSection = () => {
 
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white p-4">
         <div key={animationKey} className="flex flex-col items-center">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6">
+          <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6">
             {titleChars.map((char, index) => (
               <span
                 key={index}
