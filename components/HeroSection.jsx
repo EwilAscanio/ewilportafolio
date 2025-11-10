@@ -23,7 +23,7 @@ const HeroSection = () => {
       subtitle: 'Transformo ideas en experiencias digitales que conectan, convierten y perduran. Cada proyecto es una oportunidad para superar expectativas.',
     },
     {
-      image: '/hero-bg.jpg',
+      image: '/slide3.webp',
       title: 'Tu Visión, Mi Compromiso Profesional',
       subtitle: 'Colaboro contigo para construir soluciones a medida: diseño, desarrollo y estrategia unidos en un solo objetivo — tu éxito',
     },
@@ -83,9 +83,11 @@ const HeroSection = () => {
           className="absolute inset-0 w-full h-full transition-opacity duration-[2000ms] ease-in-out"
           style={{ opacity: activeIndex === index ? 1 : 0 }}
         >
-          <div 
+          <div
             className="absolute inset-0 bg-cover bg-center"
             style={{ backgroundImage: `url(${slide.image})` }}
+            role="img"
+            aria-label={`Imagen de fondo: ${slide.title}`}
           />
           <div className="absolute inset-0 bg-black/60" />
         </div>

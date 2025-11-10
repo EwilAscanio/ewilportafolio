@@ -17,35 +17,35 @@ const Skill = () => {
   return (
 <section
   ref={sectionRef}
-  className={`relative font-sans overflow-hidden py-20 px-4 transition-all duration-1000 ease-out ${
+  className={`relative font-sans overflow-hidden py-12 sm:py-16 md:py-20 px-4 transition-all duration-1000 ease-out ${
     sectionVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
   }`}
 >
       {/* Background with overlay */}
-      <div className="absolute inset-0 bg-[url('/images/slide2.webp')] bg-cover bg-center brightness-75">
+      <div className="absolute inset-0 bg-[url('/backgroundSkill.webp')] bg-cover bg-center brightness-75">
       <div className="bg-white/40 absolute inset-0"></div>
         
       </div>
 
-      <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+      <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16 lg:py-24">
         <div
-          className={`text-center mb-16 transition-all duration-1000 delay-200 ease-out ${
+          className={`text-center mb-8 sm:mb-12 md:mb-16 transition-all duration-1000 delay-200 ease-out ${
             true ? "opacity-100 translate-y-0 scale-100" : "opacity-0 -translate-y-10 scale-95"
           }`}
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-2">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-2">
             <span className="text-slate-900 dark:text-gray-300">Habilidades </span>
             <span className="text-primary">Tecnicas</span>
           </h2>
           <div className="w-20 h-1 bg-blue-600 mx-auto" />
-          <p className="text-xl text-slate-900 dark:text-gray-300 max-w-2xl mx-auto mt-4">
+          <p className="text-base sm:text-lg md:text-xl text-slate-900 dark:text-gray-300 max-w-2xl mx-auto mt-4">
             Herramientas y tecnologías que utilizo para crear soluciones innovadoras
           </p>
         </div>
 
         {/* Content Section */}
         <div
-          className={`flex flex-col lg:flex-row items-center gap-20 mt-40 transition-all duration-1000 delay-400 ease-out ${
+          className={`flex flex-col lg:flex-row items-center gap-8 sm:gap-12 md:gap-16 lg:gap-20 mt-20 sm:mt-32 md:mt-36 lg:mt-40 transition-all duration-1000 delay-400 ease-out ${
             sectionVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
@@ -58,7 +58,7 @@ const Skill = () => {
             <div className="relative group">
               <div className="absolute -inset-1 bg-gradient-primary rounded-lg blur-lg opacity-30 group-hover:opacity-50 transition-opacity duration-500" />
               <img
-                src="/images/slide-in2.webp"
+                src="/fotoSkill.webp"
                 alt="Man working on a computer"
                 className="relative rounded-2xl shadow-elegant hover:shadow-glow transition-all duration-500 hover:scale-[1.02] shadow-2xl shadow-gray-400/10"
               />
@@ -71,11 +71,11 @@ const Skill = () => {
               sectionVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"
             }`}
           >
-            <div ref={skillsRef} className="flex flex-wrap justify-center gap-6 max-w-4xl mx-auto">
+            <div ref={skillsRef} className="flex flex-wrap justify-center gap-3 sm:gap-4 md:gap-6 max-w-4xl mx-auto">
               {skills.map((skill, index) => (
                 <div
                   key={skill}
-                  className={`relative w-32 h-36 group transition-all duration-700 ease-out ${
+                  className={`relative w-20 h-24 sm:w-24 sm:h-28 md:w-28 md:h-32 lg:w-32 lg:h-36 group transition-all duration-700 ease-out ${
                     visibleSkills.has(index)
                       ? "opacity-100 translate-y-0 rotate-0 scale-100"
                       : "opacity-0 translate-y-20 rotate-3 scale-95"
@@ -95,7 +95,7 @@ const Skill = () => {
                     className="absolute inset-[3px] bg-gradient-to-br from-primary to-primary-dark flex items-center justify-center transition-all duration-300 group-hover:from-primary-glow group-hover:to-primary"
                     style={{ clipPath: "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)" }}
                   >
-                    <span className="text-sm font-bold text-primary-foreground text-center px-3 drop-shadow-md group-hover:scale-110 transition-transform duration-300">
+                    <span className="text-xs sm:text-sm font-bold text-primary-foreground text-center px-2 sm:px-3 drop-shadow-md group-hover:scale-110 transition-transform duration-300">
                       {skill}
                     </span>
                   </div>

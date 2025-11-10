@@ -9,7 +9,7 @@ import { Eye, Code } from "lucide-react"
  * Sección de portafolio con tarjetas 3D interactivas y animaciones de entrada
  * Muestra proyectos destacados con efectos visuales
  */
-const PortfolioSection = () => {
+const Proyects = () => {
   const { elementRef: sectionRef, isVisible: sectionVisible } = useScrollAnimation({
     threshold: 0.1,
     triggerOnce: true,
@@ -27,7 +27,7 @@ const PortfolioSection = () => {
     {
       title: "Pagina Web Personal",
       description: "Escaparate digital para destacar tu marca y servicios.",
-      image: "/pagesoymaho.jpg",
+      image: "/pagesoymaho.webp",
       tech: ["React", "Tailwind CSS", "Javascript",],
       linkCode: "https://github.com/EwilAscanio/soymahorodriguez",
       linkProject: "https://www.soymahorodriguez.com/",
@@ -36,7 +36,7 @@ const PortfolioSection = () => {
     {
       title: "Sistema de Asistencia",
       description: "Panel de control con visualización de datos en tiempo real",
-      image: "/dashboarasistencia.jpg",
+      image: "/dashboarasistencia.webp",
       tech: ["Next JS", "Tailwind CSS", "PostgresSQL",],
       linkCode: "https://github.com/EwilAscanio/AppIelfa",
       linkProject: "https://app-ielfa.vercel.app/",
@@ -146,4 +146,4 @@ const PortfolioSection = () => {
     </section>
   )
 }
-export default PortfolioSection;
+export default Proyects;
