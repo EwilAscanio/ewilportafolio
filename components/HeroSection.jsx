@@ -93,7 +93,7 @@ const HeroSection = () => {
 
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white p-4">
         <div key={animationKey} className="flex flex-col items-center">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6">
             {titleChars.map((char, index) => (
               <span
                 key={index}
@@ -104,7 +104,7 @@ const HeroSection = () => {
               </span>
             ))}
           </h1>
-          <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto leading-relaxed">
             {subtitleWords.map((word, index) => (
               <span
                 key={index}
@@ -121,21 +121,21 @@ const HeroSection = () => {
           <div className={`flex flex-col sm:flex-row gap-4 justify-center items-center mb-12 reveal-bounce ${buttonsVisible ? 'visible' : ''}`}>
             <button
                   onClick={() => scrollToSection('#proyectos')}
-                  className="px-8 py-4 bg-primary text-white font-semibold 
-                           hover:bg-primary/90 transform hover:scale-105 transition-all duration-300 
+                  className="px-6 py-3 sm:px-8 sm:py-4 bg-primary text-white font-semibold text-sm sm:text-base
+                           hover:bg-primary/90 transform hover:scale-105 transition-all duration-300
                            shadow-lg hover:shadow-xl hover:shadow-blue-500/25"
                 >
                   Ver Mis Proyectos
                 </button>
                 <button
                   onClick={() => scrollToSection('#contacto')}
-                  className="px-8 py-4 border-2 border-white/20 text-white backdrop-blur-sm font-semibold 
-                           hover:bg-primary hover:text-primary-foreground transform hover:scale-105 
+                  className="px-6 py-3 sm:px-8 sm:py-4 border-2 border-white/20 text-white backdrop-blur-sm font-semibold text-sm sm:text-base
+                           hover:bg-primary hover:text-primary-foreground transform hover:scale-105
                            transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/25"
                 >
                   Contactar Ahora
                 </button>
-          </div> 
+          </div>
         </div>
       </div>
 
@@ -169,7 +169,7 @@ const HeroSection = () => {
       
 
       {/* Social Links */}
-      <div className="absolute bottom-8 left-8 z-20">
+      <div className="absolute bottom-4 left-4 sm:bottom-8 sm:left-8 z-20">
         <div ref={socialRef} className="flex flex-col space-y-4 reveal-scale delay-500">
               <a 
                 href="https://github.com/EwilAscanio" /* TODO: Add your GitHub profile URL */
